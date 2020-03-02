@@ -4,8 +4,8 @@ const descrambleContainer = document.getElementsByClassName('descramble')[0];
 
 input.addEventListener('input', () => {
     scrambleContainer.innerHTML = null;
-    scramble(input.value);
     descrambleContainer.innerHTML = null;
+    scramble(input.value);
 });
 
 const a = "110110000001";

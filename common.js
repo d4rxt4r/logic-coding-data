@@ -1,9 +1,11 @@
 const input = document.getElementById('input');
 const scrambleContainer = document.getElementsByClassName('scramble')[0];
+const descrambleContainer = document.getElementsByClassName('descramble')[0];
 
 input.addEventListener('input', () => {
     scrambleContainer.innerHTML = null;
     scramble(input.value);
+    descrambleContainer.innerHTML = null;
 });
 
 const a = "110110000001";
@@ -27,6 +29,27 @@ function scramble(data) {
         addLine(scrambleContainer, lineData);
     }
     addLine(scrambleContainer, `Результат: ${scrabledData.join('')}`);
+    descramble(scrabledData.join(''));
+}
+
+function descramble(data) {
+    let scrabledData = [];    
+    for (i = 0; i < data.length; i++) {
+        if (i < 3) {
+            scrabledData[i] = data[i];
+            lineData = `c[${i+1}] = ${data[i]} = ${scrabledData[i]}`
+        }
+        else if (i < 5) {
+            scrabledData[i] = data[i] ^ scrabledData[i - 3];
+            lineData = `c[${i+1}] = ${data[i]} ⊕ ${scrabledData[i - 3]} = ${scrabledData[i]}`
+        }
+        else {
+            scrabledData[i] = data[i] ^ scrabledData[i - 3] ^ scrabledData[i - 5];
+            lineData = `c[${i+1}] = ${data[i]} ⊕ ${scrabledData[i - 3]} ⊕ ${scrabledData[i - 5]} = ${scrabledData[i]}`;
+        }
+        addLine(descrambleContainer, lineData);
+    }
+    addLine(descrambleContainer, `Результат: ${scrabledData.join('')}`);
 }
 
 function addLine(where, what) {

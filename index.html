@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
@@ -10,12 +10,12 @@
             height: 100vh;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 10% 10% auto;
-            grid-template-areas: "input input" "codesHead scrambleHead" "codes scramble"
+            grid-template-areas: "input input" "scrambleHead descrambleHead" "scramble descramble"
         }
         .input {
             grid-area: input;
         }
-        .descramble {grid-area: codes;}
+        .descramble {grid-area: descramble;}
         .scramble {grid-area: scramble;}
         .line {
             display: block;
@@ -27,10 +27,10 @@
         <div class="input">
             Изначальное число: <input type="text" id="input">
         </div>
-        <div>Дескремблирование:</div>
-        <div class="descramble"></div>
-        <div>Скремблирование 4B/5B:</div>
+        <div>Скремблирование:</div>
         <div class="scramble"></div>
+        <div>Дескремблирование 4B/5B:</div>
+        <div class="descramble"></div>
     </div>
 
     <script src="common.js"></script>

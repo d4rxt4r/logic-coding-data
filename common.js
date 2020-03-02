@@ -37,15 +37,15 @@ function descramble(data) {
     for (i = 0; i < data.length; i++) {
         if (i < 3) {
             scrabledData[i] = data[i];
-            lineData = `c[${i+1}] = ${data[i]} = ${data[i]}`
+            lineData = `c[${i+1}] = ${data[i]} = ${scrabledData[i]}`
         }
         else if (i < 5) {
             scrabledData[i] = data[i] ^ data[i - 3];
-            lineData = `c[${i+1}] = ${data[i]} ⊕ ${data[i - 3]} = ${data[i]}`
+            lineData = `c[${i+1}] = ${data[i]} ⊕ ${data[i - 3]} = ${scrabledData[i]}`
         }
         else {
             scrabledData[i] = data[i] ^ data[i - 3] ^ data[i - 5];
-            lineData = `c[${i+1}] = ${data[i]} ⊕ ${data[i - 3]} ⊕ ${data[i - 5]} = ${data[i]}`;
+            lineData = `c[${i+1}] = ${data[i]} ⊕ ${data[i - 3]} ⊕ ${data[i - 5]} = ${scrabledData[i]}`;
         }
         addLine(descrambleContainer, lineData);
     }

@@ -1,0 +1,29 @@
+body {
+  padding: 1em 0;
+}
+
+.input {
+  margin-bottom: 1em;
+}
+
+.input input {
+  width: 100%;
+}
+
+.scramble {
+  overflow-y: scroll;
+}
+
+.descramble {
+  overflow-y: scroll;
+}
+
+.line {
+  display: block;
+}
+
+.card {
+  max-height: 42vh;
+  margin-bottom: 1em;
+}
+/*# sourceMappingURL=style.css.map */

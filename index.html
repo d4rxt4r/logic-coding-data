@@ -1,38 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>Logic coding of data</title>
-    <style>
-        .grid {
-            display: grid;
-            height: 100vh;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 10% 10% auto;
-            grid-template-areas: "input input" "codesHead scrambleHead" "codes scramble"
-        }
-        .input {
-            grid-area: input;
-        }
-        .codes {grid-area: codes;}
-        .scramble {grid-area: scramble;}
-        .line {
-            display: block;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логическое кодирование</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="grid">
-        <div class="input">
-            Изначальное число: <input type="text" id="input">
+
+<body class="bg-secondary" style="padding: 1em;">
+
+    <div class="container grid-xs">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title h5">COOLentsan</div>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>
+                        <a href="labs/second.html">
+                            Скремблирование
+                        </a>
+                    </li>
+                    <li>
+                        <a href="labs/third.html">
+                            ...
+                        </a>
+                    </li>
+                    <li>
+                        <a href="labs/fourth.html">
+                            ...
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div>Избыточные коды:</div>
-        <div class="codes"></div>
-        <div>Скремблирование 4B/5B:</div>
-        <div class="scramble"></div>
     </div>
 
-    <script src="common.js"></script>
 </body>
+
 </html>

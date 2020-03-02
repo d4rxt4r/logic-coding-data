@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скремблирование</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-secondary">
+
+    <div class="container grid-xs">
+        <div class="input">
+            Изначальное число: <input type="text" id="input" class="form-input">
+        </div>
+        <div class="card">
+
+            <div class="card-header">
+                <div class="card-title">Скремблирование 4B/5B:</div>
+            </div>
+            <div class="card-body descramble"></div>
+            <div class="card-footer result">
+                Результат: 
+            </div>
+
+        </div>
+        <div class="card">
+
+            <div class="card-header">
+                <div class="card-title">Дескремблирование:</div>
+            </div>
+            <div class="card-body scramble"></div>
+            <div class="card-footer result">
+                Результат: 
+            </div>
+
+        </div>
+    </div>
+
+    <script src="common.js"></script>
+</body>
+
+</html>
